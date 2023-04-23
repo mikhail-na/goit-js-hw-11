@@ -1,0 +1,113 @@
+.gallery {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-gallery.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+
+
+.card-link {
+    width: 100%;
+    flex-basis: calc((100% - 60px) / 4);
+
+    box-shadow: 10px 10px 18px -12px rgb(26, 200, 46);
+    background: radial-gradient(circle 610px at 5.2% 51.6%, rgba(83, 194, 20, 0.625) 0%, rgba(115, 196, 39, 0.668) 97.5%) no-repeat fixed;
+
+    transition: transform 250ms linear;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.05);
+    }
+
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.photo {
+    display: block;
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+
+    width: 100%;
+
+    font-size: 12px;
+
+    background: radial-gradient(circle 610px at 5.2% 51.6%, rgba(245, 237, 251, 0.767) 0%, rgba(238, 238, 253, 0.699) 97.5%) no-repeat fixed;
+}
+
+.info-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: transparent;
+
+    color: #000000;
+    text-shadow: 1px 1px 1px #FFF;
+
+
+    @media screen and (min-width: 480px) {
+        font-size: 12px;
+    }
+
+    @include tablet {
+        font-size: 14px;
+    }
+
+    @include desktop {
+        font-size: 12px;
+    }
+}
+
+
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.load-more {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+}

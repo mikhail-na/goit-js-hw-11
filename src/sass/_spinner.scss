@@ -1,0 +1,67 @@
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #cbd97174;
+    z-index: 1001;
+
+    padding: 12px;
+    outline: none;
+    border: none;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.loaded_hiding .preloader {
+    transition: 300ms opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+.loading .preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loader {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 2px solid #fff;
+    border-right: 2px solid transparent;
+    animation: rotation 700ms linear infinite;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        border-left: 2px solid #a9d429;
+        border-bottom: 2px solid transparent;
+        animation: rotation 700ms linear infinite reverse;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
